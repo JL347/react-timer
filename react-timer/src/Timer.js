@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './timer.css'
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(0)
@@ -9,8 +10,8 @@ const Timer = () => {
               {seconds}s
             </div>
             <div className = "row">
-                <button className = "button-primary">
-                  Start
+                <button className ={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`}>
+                  {isActive ? 'Pause' : 'Start'}
                 </button>
                 <button className = "button-secondary">
                   Reset
